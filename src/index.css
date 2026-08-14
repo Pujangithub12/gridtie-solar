@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  --color-cream: #eef6ef;
+  --color-cream-dim: #dfece1;
+  --color-ink: #0b1712;
+  --color-ink-soft: #33463c;
+  --color-gold: #278a4f;
+  --color-gold-deep: #124f2f;
+  --color-gold-glow: #3fc471;
+  --color-line: #c2dac6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-cream);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.placeholder-block {
+  border: 1.5px dashed color-mix(in srgb, var(--color-gold-deep) 45%, transparent);
+  background: repeating-linear-gradient(
+    135deg,
+    var(--color-cream-dim),
+    var(--color-cream-dim) 10px,
+    rgba(22, 96, 58, 0.07) 10px,
+    rgba(22, 96, 58, 0.07) 20px
+  );
+}
