@@ -60,7 +60,7 @@ export default function Contact() {
                   </div>
 
                   <div className="text-[14px] text-[var(--color-ink-soft)]">
-                    Ward No. 11, Thapathali, Kathmandu, Nepal
+                    2nd Floor, Trade Tower, Thapathali, Kathmandu, Nepal
                   </div>
                 </div>
               </li>
@@ -129,7 +129,7 @@ export default function Contact() {
           </div>
 
           {/* Contact Form */}
-          <div className="rounded-2xl border border-[var(--color-line)] bg-white/40 p-8">
+          <div className="rounded-2xl border border-[var(--color-line)] bg-white/40 p-8 shadow-md">
             {sent ? (
               /* Success Message */
               <div className="flex flex-col items-center justify-center py-16 text-center">
@@ -157,7 +157,7 @@ export default function Contact() {
                       message: "",
                     });
                   }}
-                  className="mt-6 rounded-full border border-[var(--color-line)] px-5 py-2 font-[var(--font-mono)] text-[13px] text-[var(--color-ink-soft)] hover:border-[var(--color-gold-deep)]/50"
+                  className="mt-6 rounded-md border border-[var(--color-line)] px-5 py-2 font-[var(--font-mono)] text-[13px] text-[var(--color-ink-soft)] hover:border-[var(--color-gold-deep)]/50"
                 >
                   Send another message
                 </button>
@@ -260,13 +260,26 @@ export default function Contact() {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full rounded-full bg-[var(--color-ink)] px-6 py-3.5 text-[15px] font-semibold text-[var(--color-cream)] transition-colors hover:bg-[var(--color-gold-deep)] sm:w-auto"
+                  className="w-full rounded-md bg-[var(--color-ink)] px-6 py-3.5 text-[15px] font-semibold text-[var(--color-cream)] transition-colors hover:bg-[var(--color-gold-deep)] sm:w-auto"
                 >
                   Send Message
                 </button>
               </form>
             )}
           </div>
+        </div>
+
+        {/* Map */}
+        <div className="mt-16 overflow-hidden rounded-2xl border border-[var(--color-line)]">
+          <iframe
+            title="Trade Tower, Thapathali, Kathmandu location"
+            src="https://www.google.com/maps?q=Trade+Tower,+Thapathali,+Kathmandu&output=embed"
+            width="100%"
+            height="380"
+            style={{ border: 0 }}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
         </div>
       </section>
     </div>

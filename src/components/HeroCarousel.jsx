@@ -37,8 +37,9 @@ export default function HeroCarousel({ images = [], intervalMs = 4000 }) {
             }}
           />
         ))}
-      {/* Light overlay so text stays readable without hiding the photo */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/25 to-black/10" />
+      {/* Overlay so text stays readable without hiding the photo */}
+      <div className="absolute inset-0 bg-black/20" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/35 to-black/20" />
     </div>
   );
 }

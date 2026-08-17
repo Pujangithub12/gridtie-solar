@@ -66,7 +66,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="rounded-2xl border border-[var(--color-gold-deep)]/25 bg-[var(--color-cream-dim)] p-8">
+          <div className="rounded-2xl border border-[var(--color-gold-deep)]/25 bg-[var(--color-cream-dim)] p-8 shadow-md">
             <span className="font-[var(--font-mono)] text-[11px] uppercase tracking-[0.18em] text-[var(--color-gold-deep)]">
               Company Details
             </span>
@@ -80,7 +80,7 @@ export default function About() {
             <dl className="mt-6 space-y-3 border-t border-[var(--color-line)] pt-5 font-[var(--font-mono)] text-[13px]">
               <div className="flex justify-between">
                 <dt className="text-[var(--color-ink-soft)]">Registered Office</dt>
-                <dd className="text-[var(--color-ink)]">Ward No. 11, Thapathali, Kathmandu, Nepal</dd>
+                <dd className="text-[var(--color-ink)]">2nd Floor, Trade Tower, Thapathali, Kathmandu, Nepal</dd>
               </div>
               <div className="flex justify-between">
                 <dt className="text-[var(--color-ink-soft)]">Registration No.</dt>
@@ -96,7 +96,7 @@ export default function About() {
 
         {/* Mission / Approach */}
         <div className="mt-16 grid gap-6 sm:grid-cols-2">
-          <div className="rounded-2xl border border-[var(--color-line)] bg-white/30 p-8">
+          <div className="rounded-2xl border border-[var(--color-line)] bg-white/30 p-8 shadow-md">
             <h3 className="font-[var(--font-display)] text-[19px] font-semibold text-[var(--color-ink)]">
               Our Objective
             </h3>
@@ -107,7 +107,7 @@ export default function About() {
               energy goals.
             </p>
           </div>
-          <div className="rounded-2xl border border-[var(--color-line)] bg-white/30 p-8">
+          <div className="rounded-2xl border border-[var(--color-line)] bg-white/30 p-8 shadow-md">
             <h3 className="font-[var(--font-display)] text-[19px] font-semibold text-[var(--color-ink)]">
               Our Approach
             </h3>
@@ -130,7 +130,7 @@ export default function About() {
 
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
             {values.map((v) => (
-              <div key={v.title} className="rounded-2xl border border-[var(--color-line)] bg-white/40 p-6">
+              <div key={v.title} className="rounded-2xl border border-[var(--color-line)] bg-white/40 p-6 shadow-md">
                 <v.icon size={20} className="text-[var(--color-gold-deep)]" strokeWidth={1.75} />
                 <h3 className="mt-4 font-[var(--font-display)] text-[15px] font-semibold text-[var(--color-ink)]">
                   {v.title}

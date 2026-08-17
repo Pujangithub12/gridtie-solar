@@ -12,9 +12,9 @@ const orgLabels = {
 };
 
 const stats = [
-  { value: "50+ MW", label: "Grid-tied capacity installed" },
+  { value: "5+ MW", label: "Grid-tied capacity installed" },
   { value: "10+ Yrs", label: "In grid-connected solar" },
-  { value: "300+", label: "Net-metered systems live" },
+  { value: "30+", label: "Net-metered systems live" },
   { value: "24/7", label: "Remote system monitoring" },
 ];
 
@@ -47,47 +47,50 @@ export default function Home() {
 
         <div className="relative z-10 mx-auto max-w-7xl px-6 py-20 lg:px-10">
           <div className="max-w-2xl">
-            <Eyebrow large bright glow>Grid-Tie Solar · EPC Services</Eyebrow>
+            <Eyebrow large bright glow textClassName="text-yellow-400" barClassName="bg-yellow-400">Grid-Tie Solar · EPC Services</Eyebrow>
             <h1 className="mt-6 text-balance font-[var(--font-display)] text-[42px] font-semibold leading-[1.08] tracking-tight text-white sm:text-[56px]">
               Turning rooftops into grid-tied power plants.
             </h1>
             <p className="mt-6 max-w-lg text-[16px] leading-relaxed text-white/80">
               We design, install, and maintain grid-connected solar PV
-              systems for homes and businesses — engineered for net
+              systems for homes and businesses engineered for net
               metering, utility interconnection, and years of reliable
               output.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-4">
               <NavLink
                 to="/contact"
-                className="group inline-flex items-center gap-2 rounded-full bg-[var(--color-gold)] px-6 py-3.5 text-[14px] font-semibold text-[var(--color-ink)] transition-colors hover:bg-[var(--color-gold-glow)]"
+                className="group inline-flex items-center gap-2 rounded-md bg-[var(--color-gold)] px-6 py-3.5 text-[14px] font-semibold text-white transition-colors hover:bg-[var(--color-gold-glow)]"
               >
                 Start a Project
                 <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </NavLink>
               <NavLink
                 to="/projects"
-                className="inline-flex items-center gap-2 rounded-full border border-white/40 px-6 py-3.5 text-[14px] font-semibold text-white transition-colors hover:border-white hover:bg-white/10"
+                className="inline-flex items-center gap-2 rounded-md border border-white/40 px-6 py-3.5 text-[14px] font-semibold text-white transition-colors hover:border-white hover:bg-white/10"
               >
                 View Our Work
               </NavLink>
             </div>
-            <p className="mt-8 font-[var(--font-mono)] text-[12px] uppercase tracking-[0.14em] text-white/60">
-              Gridtie solar related info....
-            </p>
           </div>
         </div>
       </section>
 
       {/* Stats */}
-      <section className="border-b border-[var(--color-line)] bg-[var(--color-cream-dim)]">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-px overflow-hidden rounded-none bg-[var(--color-line)] px-0 lg:grid-cols-4 lg:px-10">
+      <section className="relative z-20 -mt-12 px-6 lg:px-10">
+        <div className="mx-auto grid max-w-7xl grid-cols-2 gap-4 rounded-2xl border border-[var(--color-line)] bg-[var(--color-cream-dim)] p-4 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.25)] sm:p-6 lg:grid-cols-4">
           {stats.map((s) => (
-            <div key={s.label} className="bg-[var(--color-cream-dim)] px-6 py-8 text-center sm:text-left">
-              <div className="font-[var(--font-mono)] text-[26px] font-medium text-[var(--color-gold-deep)]">
-                {s.value}
+            <div
+              key={s.label}
+              className="flex items-start gap-3 rounded-xl bg-white/50 px-4 py-5 sm:px-5"
+            >
+              <span className="mt-1 h-8 w-[3px] shrink-0 rounded-full bg-[var(--color-gold)]" />
+              <div>
+                <div className="font-[var(--font-mono)] text-[24px] font-semibold text-[var(--color-gold-deep)] sm:text-[26px]">
+                  {s.value}
+                </div>
+                <div className="mt-1 text-[13px] font-semibold text-[var(--color-ink-soft)]">{s.label}</div>
               </div>
-              <div className="mt-1 text-[13px] text-[var(--color-ink-soft)]">{s.label}</div>
             </div>
           ))}
         </div>
@@ -104,7 +107,7 @@ export default function Home() {
           {offerings.map((o) => (
             <div
               key={o.title}
-              className="group relative overflow-hidden rounded-2xl border border-[var(--color-line)] bg-white/30 p-7 transition-colors hover:border-[var(--color-gold-deep)]/40"
+              className="group relative overflow-hidden rounded-2xl border border-[var(--color-line)] bg-white/30 p-7 shadow-md transition-colors hover:border-[var(--color-gold-deep)]/40"
             >
               <span className="absolute right-0 top-0 h-14 w-14 rounded-bl-2xl bg-[var(--color-gold)]/10 transition-colors group-hover:bg-[var(--color-gold)]/20" />
               <o.icon size={22} className="text-[var(--color-gold-deep)]" strokeWidth={1.75} />
@@ -139,7 +142,7 @@ export default function Home() {
 
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {featured.map((p) => (
-              <div key={p.id} className="flex flex-col rounded-2xl border border-[var(--color-line)] bg-white/40 p-5">
+              <div key={p.id} className="flex flex-col rounded-2xl border border-[var(--color-line)] bg-white/40 p-5 shadow-md">
                 <ImagePlaceholder src={p.image} label={p.name} />
                 <div className="mt-5 flex-1">
                   <span className="font-[var(--font-mono)] text-[11px] uppercase tracking-[0.14em] text-[var(--color-gold-deep)]">
@@ -178,7 +181,7 @@ export default function Home() {
           </p>
           <NavLink
             to="/contact"
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-[var(--color-gold)] px-7 py-3.5 text-[14px] font-semibold text-[var(--color-ink)] transition-colors hover:bg-[var(--color-gold-glow)]"
+            className="mt-8 inline-flex items-center gap-2 rounded-md bg-[var(--color-gold)] px-7 py-3.5 text-[14px] font-semibold text-[var(--color-ink)] transition-colors hover:bg-[var(--color-gold-glow)]"
           >
             Get in Touch
             <ArrowUpRight size={16} />

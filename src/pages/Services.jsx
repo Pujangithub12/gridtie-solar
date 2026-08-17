@@ -55,7 +55,7 @@ export default function Services() {
         <div className="mx-auto max-w-4xl text-center">
           <Eyebrow>Services</Eyebrow>
           <h1 className="mx-auto mt-5 max-w-2xl text-balance font-[var(--font-display)] text-[38px] font-semibold leading-tight text-[var(--color-ink)] sm:text-[46px]">
-            Full-service grid-tie solar EPC.
+            Full-service gridtie solar EPC.
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-[16px] leading-relaxed text-[var(--color-ink-soft)]">
             From first site visit to years of ongoing support, we handle
@@ -75,7 +75,7 @@ export default function Services() {
           {services.map((s) => (
             <div
               key={s.title}
-              className="group relative overflow-hidden rounded-2xl border border-[var(--color-line)] bg-white/30 p-7 transition-colors hover:border-[var(--color-gold-deep)]/40"
+              className="group relative overflow-hidden rounded-2xl border border-[var(--color-line)] bg-white/30 p-7 shadow-md transition-colors hover:border-[var(--color-gold-deep)]/40"
             >
               <span className="absolute right-0 top-0 h-14 w-14 rounded-bl-2xl bg-[var(--color-gold)]/10 transition-colors group-hover:bg-[var(--color-gold)]/20" />
               <s.icon size={22} className="text-[var(--color-gold-deep)]" strokeWidth={1.75} />
@@ -98,7 +98,7 @@ export default function Services() {
           </h2>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {process.map((p) => (
-              <div key={p.step} className="rounded-2xl border border-[var(--color-line)] bg-white/40 p-6">
+              <div key={p.step} className="rounded-2xl border border-[var(--color-line)] bg-white/40 p-6 shadow-md">
                 <span className="font-[var(--font-mono)] text-[13px] font-medium text-[var(--color-gold-deep)]">
                   {p.step}
                 </span>

@@ -39,7 +39,7 @@ export default function Team() {
           {team.map((person) => (
             <div
               key={person.name}
-              className="flex flex-col items-center rounded-2xl border border-[var(--color-line)] bg-white/40 p-7 text-center"
+              className="flex flex-col items-center rounded-2xl border border-[var(--color-line)] bg-white/40 p-7 text-center shadow-md"
             >
               {/* Photo placeholder — replace with an <img> once you have the pic */}
               <div className="placeholder-block flex h-20 w-20 items-center justify-center rounded-full">
