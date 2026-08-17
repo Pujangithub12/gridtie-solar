@@ -3,12 +3,21 @@ import britanniaImg from "../assets/Project-Images/Britannia Rooftop/Britannia.j
 import daburImg from "../assets/Project-Images/Dabur Nepal/dabur.jpg";
 import sunmaiImg from "../assets/Project-Images/Sunmai water rooftop/sunmai.png";
 import vishnuSadanImg from "../assets/Project-Images/Vishnu Sadan Solar PV/VISNU SADAN.png";
+import jhapaImg from "../assets/Project-Images/Jhapa solar/jhapa.png";
+import collegeMedImg from "../assets/Project-Images/College of medical sciences/college of medical sciences.jpeg";
+import galaxyGardenImg from "../assets/Project-Images/Galaxy garden/galaxy garden.jpg";
+import holidayInnImg from "../assets/Project-Images/Hotel Holiday Inn/Hotel Holiday Inn solar.jpg";
+// Butwal has no photo yet — leave unset and the placeholder graphic shows
+// instead. Once you have one, drop it in
+// src/assets/Project-Images/Butwal Solar PV/ and import it here.
 
 export const projects = [
+  // --- Grid Tie Solar's own projects ---
   {
     id: "shanta-complex",
     name: "Shanta Complex PV Plant",
     org: "commercial",
+    company: "gridtie",
     location: "Putalisadak, Kathmandu",
     capacity: "Capacity: 50.7 kWp",
     status: "Completed",
@@ -26,6 +35,7 @@ export const projects = [
     id: "britannia",
     name: "Britannia Nepal Solar PV Project",
     org: "industrial",
+    company: "gridtie",
     location: "Jeetpur Simara",
     capacity: "Capacity: 300 kWp",
     status: "Completed",
@@ -44,6 +54,7 @@ export const projects = [
     id: "dabur-nepal",
     name: "Dabur Nepal Pvt. Ltd.",
     org: "industrial",
+    company: "gridtie",
     location: "Jeetpur Simara",
     capacity: "Capacity: 976 kWp",
     status: "Completed",
@@ -62,6 +73,7 @@ export const projects = [
     id: "sunmai-water",
     name: "Sunmai Water Solar PV Project",
     org: "industrial",
+    company: "gridtie",
     location: "Budhashanti, Jhapa",
     capacity: "Capacity: 50.73 kWp",
     status: "Completed",
@@ -79,6 +91,7 @@ export const projects = [
     id: "vishnu-sadan",
     name: "Vishnu Sadan Solar PV Project",
     org: "commercial",
+    company: "gridtie",
     location: "Pingalasthan Road, Kathmandu",
     capacity: "Capacity: 50.7 kWp",
     status: "Completed",
@@ -92,10 +105,105 @@ export const projects = [
       { label: "10-Yr Savings", value: "~NPR 811,800" },
     ],
   },
+
+  // --- JDNE (sister company) projects ---
+  {
+    id: "jhapa-solar",
+    name: "Jhapa Solar PV Project",
+    org: "utility",
+    company: "jdne",
+    location: "Shivasatakshi, Jhapa",
+    capacity: "Capacity: 12 MWp",
+    status: "Completed",
+    year: "2023",
+    summary:
+      "A utility-scale solar plant developed across 15.57 hectares, comprising 22,232 solar modules and two 5 MVA inverters. Connected directly to the NEA 33 kV grid infrastructure.",
+    image: jhapaImg,
+    specs: [
+      { label: "Panels / Equipment", value: "22,232 Solar Modules" },
+      { label: "Inverter", value: "Two 5 MVA Inverters" },
+      { label: "Modules", value: "22,232 units" },
+      { label: "Project Area", value: "15.57 hectares" },
+    ],
+  },
+  {
+    id: "butwal-solar",
+    name: "Butwal Solar PV Project",
+    org: "utility",
+    company: "jdne",
+    location: "Tillottama, Rupandehi",
+    capacity: "Capacity: 10.2 MWp",
+    status: "Completed",
+    summary:
+      "Large-scale generation plant spanning 17.2 hectares with 31,280 advanced solar modules. Power evacuated systematically via the 33 kV Amuwa Substation.",
+    // image: no photo available yet
+    specs: [
+      { label: "Panels / Equipment", value: "31,280 Solar Modules" },
+      { label: "Inverter", value: "N/A" },
+      { label: "Modules", value: "31,280 units" },
+      { label: "Project Area", value: "17.2 hectares" },
+    ],
+  },
+  {
+    id: "college-medical-sciences",
+    name: "College of Medical Sciences Solar",
+    org: "commercial",
+    company: "jdne",
+    location: "Bharatpur, Chitwan",
+    capacity: "Capacity: 1 MWp",
+    status: "Ongoing",
+    summary:
+      "Engineering and design of a high-capacity institutional rooftop framework expected to generate 682,460 kWh annually for medical operations.",
+    image: collegeMedImg,
+    specs: [
+      { label: "Annual Generation (Expected)", value: "682,460 kWh" },
+      { label: "Owner / Client", value: "College of Medical Sciences" },
+      { label: "Project Area", value: "N/A" },
+      { label: "Warranty", value: "N/A" },
+    ],
+  },
+  {
+    id: "galaxy-garden-resort",
+    name: "Galaxy Garden Resort Solar",
+    org: "commercial",
+    company: "jdne",
+    location: "Bharatpur",
+    capacity: "Capacity: 250 kWp",
+    status: "Ongoing",
+    summary:
+      "A targeted rooftop deployment engineered to produce 169,755 kWh annually, optimized for a calculated financial payback period under three years.",
+    image: galaxyGardenImg,
+    specs: [
+      { label: "Annual Generation", value: "169,755 kWh" },
+      { label: "Payback Period", value: "Under 3 years" },
+      { label: "Owner / Client", value: "Galaxy Garden Resort" },
+      { label: "Project Area", value: "N/A" },
+    ],
+  },
+  {
+    id: "holiday-inn-express",
+    name: "Hotel Holiday Inn Express Rooftop",
+    org: "commercial",
+    company: "jdne",
+    location: "Naxal, Kathmandu",
+    capacity: "Capacity: 60 kWp",
+    status: "Completed",
+    year: "2026",
+    summary:
+      "A premium grid-connected commercial array generating roughly 88,351 kWh annually, yielding significant operational savings for the hospitality asset.",
+    image: holidayInnImg,
+    specs: [
+      { label: "Panels / Equipment", value: "JA Solar Modules" },
+      { label: "Inverter", value: "Huawei SUN2000-50K-MC0" },
+      { label: "Project Area", value: "4,000 sq. ft." },
+      { label: "Owner / Client", value: "Hotel Holiday Inn Express" },
+    ],
+  },
 ];
 
 export const filters = [
   { key: "all", label: "All Projects" },
   { key: "commercial", label: "Commercial" },
   { key: "industrial", label: "Industrial" },
+  { key: "utility", label: "Utility-Scale" },
 ];
