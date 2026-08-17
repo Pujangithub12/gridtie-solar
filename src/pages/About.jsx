@@ -15,7 +15,7 @@ const values = [
   {
     icon: Compass,
     title: "Regulatory Fluency",
-    text: "Familiarity with grid-connectivity rules and net-metering frameworks, handled in-house from application to approval.",
+    text: "Familiarity with grid connectivity rules and net metering frameworks, handled in-house from application to approval.",
   },
   {
     icon: Leaf,
@@ -25,7 +25,7 @@ const values = [
   {
     icon: Users,
     title: "Inclusion",
-    text: "A workplace and project practice guided by equal opportunity — at every level, on every site.",
+    text: "A workplace and project practice guided by equal opportunity at every level, on every site.",
   },
 ];
 
@@ -55,12 +55,12 @@ export default function About() {
             </h2>
             <p className="mt-5 text-[15px] leading-relaxed text-[var(--color-ink-soft)]">
               We provide engineering, procurement, and construction
-              services for grid-connected solar systems, from initial
+              services for grid connected solar systems, from initial
               site assessment through design, installation, and
               commissioning.
             </p>
             <p className="mt-4 text-[15px] leading-relaxed text-[var(--color-ink-soft)]">
-              We specialize in grid-tied solar PV- rooftop, ground-mount,
+              We specialize in grid-tied solar PV rooftop, ground-mount,
               and net-metered systems for homes, businesses, and
               institutions moving toward clean, grid-connected power.
             </p>
@@ -83,12 +83,8 @@ export default function About() {
                 <dd className="text-[var(--color-ink)]">2nd Floor, Trade Tower, Thapathali, Kathmandu, Nepal</dd>
               </div>
               <div className="flex justify-between">
-                <dt className="text-[var(--color-ink-soft)]">Registration No.</dt>
-                <dd className="text-[var(--color-ink)]">Add registration no.</dd>
-              </div>
-              <div className="flex justify-between">
                 <dt className="text-[var(--color-ink-soft)]">Incorporated</dt>
-                <dd className="text-[var(--color-ink)]">Add date</dd>
+                <dd className="text-[var(--color-ink)]">2024</dd>
               </div>
             </dl>
           </div>
@@ -113,7 +109,7 @@ export default function About() {
             </h3>
             <p className="mt-3 text-[14px] leading-relaxed text-[var(--color-ink-soft)]">
               End-to-end delivery, which includes assessment, design, procurement,
-              installation, and O&M- with close attention paid to every
+              installation, and O&M with close attention paid to every
               site we take on.
             </p>
           </div>

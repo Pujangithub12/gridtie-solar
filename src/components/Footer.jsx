@@ -9,8 +9,8 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-[1.3fr_1fr_1fr]">
           <div>
             <div className="flex items-center gap-2.5">
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/25 bg-white/10">
-                <Logo className="h-5 w-5" />
+              <span className="flex h-12 w-20 shrink-0 items-center justify-center overflow-hidden rounded-xl">
+                <Logo className="h-20 w-20 scale-150 rounded-xl" />
               </span>
               <span className="font-[var(--font-display)] text-[15px] font-semibold text-white">
                 GridTie Solar

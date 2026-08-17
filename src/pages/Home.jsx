@@ -142,9 +142,13 @@ export default function Home() {
 
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {featured.map((p) => (
-              <div key={p.id} className="flex flex-col rounded-2xl border border-[var(--color-line)] bg-white/40 p-5 shadow-md">
-                <ImagePlaceholder src={p.image} label={p.name} />
-                <div className="mt-5 flex-1">
+              <div
+                key={p.id}
+                className="flex flex-col overflow-hidden rounded-2xl border border-[var(--color-line)] bg-white/40 shadow-md transition-all duration-300 hover:-translate-y-1.5 hover:border-[var(--color-gold-glow)] hover:shadow-[0_0_28px_6px_rgba(63,196,113,0.55)]"
+              >
+                <ImagePlaceholder src={p.image} label={p.name} rounded="rounded-none" aspect="aspect-[16/9]" />
+                <div className="flex flex-1 flex-col p-5">
+                <div className="flex-1">
                   <span className="font-[var(--font-mono)] text-[11px] uppercase tracking-[0.14em] text-[var(--color-gold-deep)]">
                     {orgLabels[p.org] || p.org}
                   </span>
@@ -155,9 +159,10 @@ export default function Home() {
                     {p.summary}
                   </p>
                 </div>
-                <div className="mt-5 flex items-center justify-between border-t border-[var(--color-line)] pt-4 font-[var(--font-mono)] text-[12px] text-[var(--color-ink-soft)]">
+                <div className="mt-4 flex items-center justify-between border-t border-[var(--color-line)] pt-3 font-[var(--font-mono)] text-[12px] text-[var(--color-ink-soft)]">
                   <span>{p.location}</span>
                   <span className="font-semibold text-[var(--color-gold-deep)]">{p.capacity}</span>
+                </div>
                 </div>
               </div>
             ))}

@@ -30,11 +30,12 @@ export default function Projects() {
           {projects.map((p) => (
             <div
               key={p.id}
-              className="flex flex-col rounded-2xl border border-[var(--color-line)] bg-white/40 p-5"
+              className="flex flex-col overflow-hidden rounded-2xl border border-[var(--color-line)] bg-white/40 shadow-md transition-all duration-300 hover:-translate-y-1.5 hover:border-[var(--color-gold-glow)] hover:shadow-[0_0_28px_6px_rgba(63,196,113,0.55)]"
             >
-              <ImagePlaceholder src={p.image} label={p.name} />
+              <ImagePlaceholder src={p.image} label={p.name} rounded="rounded-none" aspect="aspect-[16/9]" />
 
-              <div className="mt-5 flex items-center justify-between">
+              <div className="flex flex-1 flex-col p-5">
+              <div className="flex items-center justify-between">
                 <span className="font-[var(--font-mono)] text-[12px] uppercase tracking-[0.12em] text-[var(--color-gold-deep)]">
                   {orgLabels[p.org] || p.org}
                 </span>
@@ -54,7 +55,7 @@ export default function Projects() {
                 {p.summary}
               </p>
 
-              <div className="mt-5 grid grid-cols-2 gap-x-4 gap-y-2 border-t border-[var(--color-line)] pt-4">
+              <div className="mt-4 grid grid-cols-2 gap-x-4 gap-y-2 border-t border-[var(--color-line)] pt-3">
                 {p.specs.map((s) => (
                   <div key={s.label}>
                     <div className="font-[var(--font-mono)] text-[11px] uppercase tracking-[0.08em] text-[var(--color-ink-soft)]/70">
@@ -67,13 +68,14 @@ export default function Projects() {
                 ))}
               </div>
 
-              <div className="mt-5 flex items-center justify-between border-t border-[var(--color-line)] pt-4">
+              <div className="mt-4 flex items-center justify-between border-t border-[var(--color-line)] pt-3">
                 <span className="font-[var(--font-mono)] text-[13px] text-[var(--color-ink-soft)]">
                   {p.year}
                 </span>
                 <span className="font-[var(--font-display)] text-[17px] font-semibold text-[var(--color-gold-deep)]">
                   {p.capacity}
                 </span>
+              </div>
               </div>
             </div>
           ))}

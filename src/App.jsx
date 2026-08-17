@@ -17,7 +17,7 @@ function ScrollToTop() {
   return null;
 }
 
-function AppShell() {
+export function AppShell() {
   return (
     <div className="flex min-h-screen flex-col bg-[var(--color-cream)] font-[var(--font-body)] text-[var(--color-ink)]">
       <Navbar />
