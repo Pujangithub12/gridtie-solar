@@ -1,5 +1,8 @@
 import { User } from "lucide-react";
 import Eyebrow from "../components/Eyebrow";
+import kuberManiImg from "../assets/team/kubermani.jpg";
+import prabinImg from "../assets/team/prabin.jpg";
+import kadamManiImg from "../assets/team/kadam.jpg";
 
 const team = [
   {
@@ -7,6 +10,14 @@ const team = [
     role: "Managing Director",
     note: "Leads day-to-day operations and client delivery across active project sites.",
     credentials: [],
+    photo: kuberManiImg,
+  },
+  {
+    name: "Kadam Mani Nepal",
+    role: "Director",
+    note: "Oversees strategic planning and business growth, helping guide the company's project pipeline and long-term direction.",
+    credentials: [],
+    photo: kadamManiImg,
   },
   {
     name: "Prabin Dhakal",
@@ -16,6 +27,7 @@ const team = [
       "M.Sc. Planning & Operation of Energy Systems",
       "6+ years in solar & renewable energy",
     ],
+    photo: prabinImg,
   },
 ];
 
@@ -41,10 +53,17 @@ export default function Team() {
               key={person.name}
               className="flex flex-col items-center rounded-2xl border border-[var(--color-line)] bg-white/40 p-7 text-center shadow-md"
             >
-              {/* Photo placeholder — replace with an <img> once you have the pic */}
-              <div className="placeholder-block flex h-20 w-20 items-center justify-center rounded-full">
-                <User size={24} className="text-[var(--color-gold-deep)]/70" />
-              </div>
+              {person.photo ? (
+                <img
+                  src={person.photo}
+                  alt={person.name}
+                  className="h-40 w-40 rounded-full object-cover"
+                />
+              ) : (
+                <div className="placeholder-block flex h-40 w-40 items-center justify-center rounded-full">
+                  <User size={24} className="text-[var(--color-gold-deep)]/70" />
+                </div>
+              )}
 
               <h3 className="mt-5 font-[var(--font-display)] text-[15px] font-semibold text-[var(--color-ink)]">
                 {person.name}
