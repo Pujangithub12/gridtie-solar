@@ -79,10 +79,10 @@ export default function Contact() {
 
                   <div className="text-[14px] text-[var(--color-ink-soft)]">
                     <a
-                      href="mailto:info.gridtiesolar@gmail.com"
+                      href="mailto:gridtiesolar22@gmail.com"
                       className="hover:text-[var(--color-gold-deep)]"
                     >
-                      @gmail.com
+                      gridtiesolar22@gmail.com
                     </a>
                   </div>
                 </div>
@@ -102,10 +102,10 @@ export default function Contact() {
 
                   <div className="text-[14px] text-[var(--color-ink-soft)]">
                     <a
-                      href="tel:+9770000000000"
+                      href="tel:+9779851187011"
                       className="hover:text-[var(--color-gold-deep)]"
                     >
-                      +977 
+                      +977 9851187011
                     </a>
                   </div>
                 </div>

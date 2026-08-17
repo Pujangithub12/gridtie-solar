@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { Mail, MapPin } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import Logo from "./Logo";
 
 export default function Footer() {
@@ -57,8 +57,14 @@ export default function Footer() {
               </li>
               <li className="flex gap-2.5">
                 <Mail size={16} className="mt-0.5 shrink-0 text-[var(--color-gold-glow)]" />
-                <a href="mailto:info@example.com" className="hover:text-white">
-                  @example.com
+                <a href="mailto:gridtiesolar22@gmail.com" className="hover:text-white">
+                  gridtiesolar22@gmail.com
+                </a>
+              </li>
+              <li className="flex gap-2.5">
+                <Phone size={16} className="mt-0.5 shrink-0 text-[var(--color-gold-glow)]" />
+                <a href="tel:+9779851187011" className="hover:text-white">
+                  +977 9851187011
                 </a>
               </li>
             </ul>
